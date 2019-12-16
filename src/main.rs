@@ -1,5 +1,9 @@
 mod day1;
 
 fn main() {
-    println!("ex1: {}", day1::day1());
+    println!(
+        "day 1:\n\tpart 1: {}\n\tpart 2: {}",
+        day1::part1(),
+        day1::part2()
+    );
 }

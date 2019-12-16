@@ -1,11 +1,32 @@
-pub fn day1() -> f32 {
-	use std::io::BufRead;
-	let mut fuel = 0.0;
+use std::fs::File;
+use std::io::{prelude::*, BufReader};
 
-	for line in std::io::stdin().lock().lines() {
-		let mut curr: f32 = line.unwrap().parse().expect("failed to parse into number");
-		curr /= 3.0;
-		fuel += curr.floor() - 2.0;
+pub fn part1() -> i32 {
+	let reader = BufReader::new(File::open("./inputs/day1.txt").unwrap());
+	let mut fuel = 0;
+
+	for line in reader.lines() {
+		let mut mass: i32 = line.unwrap().parse().expect("failed to parse into number");
+		mass /= 3;
+		fuel += mass - 2;
+	}
+	fuel
+}
+
+pub fn part2() -> i32 {
+	let reader = BufReader::new(File::open("./inputs/day1.txt").unwrap());
+	let mut fuel = 0;
+
+	const THRESHOLD: i32 = 2 * 4;
+
+	for line in reader.lines() {
+		let mut mass: i32 = line.unwrap().parse().expect("failed to parse into number");
+
+		while mass > THRESHOLD {
+			mass /= 3;
+			mass -= 2;
+			fuel += mass;
+		}
 	}
 
 	fuel
