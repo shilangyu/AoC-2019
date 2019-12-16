@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::{prelude::*, BufReader};
+use std::io::{BufRead, BufReader};
 
 pub fn part1() -> i32 {
 	let reader = BufReader::new(File::open("./inputs/day1.txt").unwrap());
