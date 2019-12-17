@@ -71,8 +71,8 @@ impl Line {
 		None
 	}
 
-	fn length(&self) -> f32 {
-		(((self.0.x - self.1.x).pow(2) + (self.0.y - self.1.y).pow(2)) as f32).sqrt()
+	fn length(&self) -> i32 {
+		self.0.distance(&self.1)
 	}
 }
 
@@ -141,9 +141,9 @@ pub fn part2() -> i32 {
 		let prev_pos = curr_pos.clone();
 		curr_pos = curr_pos + Point::from_dir(dir);
 		let curr_line = Line(prev_pos.clone(), curr_pos.clone());
-		sum_b += curr_line.length() as i32;
+		sum_b += curr_line.length();
 		for path in &paths {
-			sum_a += path.length() as i32;
+			sum_a += path.length();
 			match path.intersects(&curr_line) {
 				Some(p) => {
 					let curr = sum_a + sum_b - path.1.distance(&p) - curr_line.1.distance(&p);
