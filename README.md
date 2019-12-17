@@ -7,7 +7,7 @@ Advent of Code 2019 in Rust
 |  1  |   ✅    |   ✅    |
 |  2  |   ✅    |   ✅    |
 |  3  |   ✅    |   ✅    |
-|  4  |   ❌    |   ❌    |
+|  4  |   ✅    |   ✅    |
 |  5  |   ❌    |   ❌    |
 |  6  |   ❌    |   ❌    |
 |  7  |   ❌    |   ❌    |
@@ -43,5 +43,8 @@ Advent of Code 2019 in Rust
   day 3:
     part 1: 860
     part 2: 9238
+  day 4:
+    part 1: 2081
+    part 2: 1411
   ```
 </details>
