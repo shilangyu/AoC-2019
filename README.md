@@ -8,7 +8,7 @@ Advent of Code 2019 in Rust
 |  2  |   ✅    |   ✅    |
 |  3  |   ✅    |   ✅    |
 |  4  |   ✅    |   ✅    |
-|  5  |   ❌    |   ❌    |
+|  5  |   ✅    |   ✅    |
 |  6  |   ❌    |   ❌    |
 |  7  |   ❌    |   ❌    |
 |  8  |   ❌    |   ❌    |
@@ -21,10 +21,10 @@ Advent of Code 2019 in Rust
 | 15  |   ❌    |   ❌    |
 | 16  |   ❌    |   ❌    |
 | 17  |   ❌    |   ❌    |
-| 18  | not out | not out |
-| 19  | not out | not out |
-| 20  | not out | not out |
-| 21  | not out | not out |
+| 18  |   ❌    |   ❌    |
+| 19  |   ❌    |   ❌    |
+| 20  |   ❌    |   ❌    |
+| 21  |   ❌    |   ❌    |
 | 22  | not out | not out |
 | 23  | not out | not out |
 | 24  | not out | not out |
@@ -46,5 +46,8 @@ Advent of Code 2019 in Rust
   day 4:
     part 1: 2081
     part 2: 1411
+  day 5:
+    part 1: 5074395
+    part 2: 8346937
   ```
 </details>
