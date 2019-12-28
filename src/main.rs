@@ -1,11 +1,15 @@
 mod day1;
 mod day10;
+mod day12;
 mod day2;
 mod day3;
 mod day4;
 mod day5;
 mod day6;
 mod day8;
+
+#[macro_use]
+extern crate scan_fmt;
 
 fn main() {
     println!(
@@ -63,5 +67,12 @@ fn main() {
     part 2: {}",
         day10::part1(),
         day10::part2()
+    );
+    println!(
+        "day 12:
+    part 1: {}
+    part 2: {}",
+        day12::part1(),
+        day12::part2()
     );
 }
