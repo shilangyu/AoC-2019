@@ -90,12 +90,15 @@ pub fn part2() -> String {
 	}
 
 	let mut image = String::from("\n");
-	const LOOKUP: [char; 10] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	for i in 0..HEIGHT {
 		for j in 0..WIDTH {
 			for layer in &layers {
 				if layer[i][j] != 2 {
-					image.push(LOOKUP[layer[i][j]]);
+					if layer[i][j] == 1 {
+						image.push('█');
+					} else {
+						image.push(' ');
+					}
 					break;
 				}
 			}
