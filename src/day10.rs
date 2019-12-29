@@ -1,12 +1,16 @@
-fn simplify(ab: (i32, i32)) -> (i32, i32) {
-	let mut cp_a = ab.0;
-	let mut cp_b = ab.1;
+pub fn gcd(a: i128, b: i128) -> i128 {
+	let mut cp_a = a;
+	let mut cp_b = b;
 	while cp_a != 0 {
 		let rem = cp_b % cp_a;
 		cp_b = cp_a;
 		cp_a = rem;
 	}
-	let gcd = if cp_b < 0 { cp_b * -1 } else { cp_b };
+	return if cp_b < 0 { -cp_b } else { cp_b };
+}
+
+fn simplify(ab: (i32, i32)) -> (i32, i32) {
+	let gcd = gcd(ab.0 as i128, ab.1 as i128) as i32;
 
 	return (ab.0 / gcd, ab.1 / gcd);
 }
